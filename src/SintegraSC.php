@@ -106,8 +106,6 @@ class SintegraSC
 	 */
 	public static function parser(Crawler $crawler)
 	{
-//		if ($crawler->filter('body > table:nth-child(3) > tr:nth-child(2) > td > b > font')->count() > 0)
-//			throw new Exception('Erro ao consultar. O CNPJ informado não existe no cadastro.', 99);
 
 		$tdList = $crawler->filter('form td');
 

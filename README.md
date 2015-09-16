@@ -32,7 +32,7 @@ Agora basta chamar o método `consulta()`
 
 ```php
 $dadosEmpresa = SintegraPHP\SC\SintegraSC::consulta(
-    '34028316002823',
+    '83646984003710',
     'INFORME_AS_LETRAS_DO_CAPTCHA',
     $params['viewstate'],
     $params['eventvalidation'],
