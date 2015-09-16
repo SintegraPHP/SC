@@ -1,0 +1,386 @@
+<html>
+<head>
+	<title>SINTEGRA/ICMS - Consulta Pública</title>
+</head>
+<body bgcolor="#cbd6fd" text="#000000">
+<script language="JavaScript">
+	function AIDFPAFS(idCNPJ, idIE) {
+		document.frm_EmpresaSocios.txt_CNPJ.value = idCNPJ;
+		document.frm_EmpresaSocios.txt_IE.value = idIE;
+		document.frm_EmpresaSocios.action = "consulta_empresa_aidf_pafs.asp";
+		document.frm_EmpresaSocios.submit();
+	}
+	function SOCIOS(idCNPJ, idIE) {
+		document.frm_EmpresaSocios.txt_CNPJ.value = idCNPJ;
+		document.frm_EmpresaSocios.txt_IE.value = idIE;
+		document.frm_EmpresaSocios.action = "consulta_empresa_socios.asp";
+		document.frm_EmpresaSocios.submit();
+	}
+	function SELECAO(idTIPO, idPESQ) {
+		document.frm_EmpresaSocios.txt_TIPO.value = idTIPO;
+		document.frm_EmpresaSocios.txt_PESQ.value = idPESQ;
+		document.frm_EmpresaSocios.action = "consulta_empresa_inscricoes.asp";
+		document.frm_EmpresaSocios.submit();
+	}
+</script>
+<table width="760" border="1" align="center" cellpadding="3" cellspacing="0" style="width: 760px">
+	<tr>
+		<td valign="center" bgcolor="#ffffff">
+			<div align="center">
+				<img height="81" src="imagens/sintegra.jpg" width="108"></div>
+		</td>
+		<td valign="center" bgcolor="#f1f1b1">
+			<p align="center">
+				<font face="Verdana, Arial, Helvetica"><font size="+1"
+															 color="#000080"><b>SINTEGRA/ICMS</b></font></font></p>
+
+			<p align="center">
+				<font face="Verdana, Arial, Helvetica"><font color="#000080"><b>Consulta Pública ao
+					Cadastro do Estado de&nbsp;<br>
+					Santa Catarina<br>
+				</b></font></font><font color="#000080"><strong><font size="1"><font size="4">
+				<br>
+			</font><font size="1">Cadastro Atualizado até: </font></font></strong><b><font face="Verdana"
+																						   size="1">
+				<span id="lblDataAtualizacao">16/9/2015</span>
+			</font></b></font>
+		</td>
+		<td valign="center" bgcolor="#ffffff">
+			<p align="center">
+				<img border="0" src="imagens/sc.gif" width="74" height="62"></p>
+		</td>
+	</tr>
+</table>
+<br>
+<table width="760" cellspacing="0" cellpadding="3" align="center" bordercolor="#ffffff">
+	<tr>
+		<td align="center">
+			<span id="lblNaoEncontrado"></span>
+		</td>
+	</tr>
+</table>
+<table width="760" cellspacing="0" cellpadding="3" align="center" style="width: 760px"
+	   border="1">
+	<tr>
+		<td style="width: 380px" width="380" bgcolor="white">
+			<div align="left">
+				<b><font face="Verdana" size="1">Data da Consulta:
+					<span id="lblDataConsulta">16/9/2015</span></font></b></div>
+		</td>
+	</tr>
+</table>
+<br>
+
+<form name="frm_EmpresaSocios" method="post">
+
+	<table width="760" border="0" cellspacing="0" cellpadding="3" align="center" bordercolor="#ffffff">
+		<tr>
+			<td>
+				<b><font face="Verdana" size="1" color="#996600">IDENTIFICAÇÃO *</font></b>
+			</td>
+		</tr>
+	</table>
+	<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" background=""
+		   style="width: 760px">
+		<tr>
+			<td width="45" valign="top" bgcolor="#f1f1b1" style="width: 45px">
+				<b><font face="Verdana" size="1">CPF/CNPJ: </font></b>
+			</td>
+			<td width="280" valign="top" bgcolor="#fafae4" style="width: 280px">
+				<font face="Verdana" size="1">
+					83646984003710 </font>
+			</td>
+			<td valign="top" bgcolor="#f1f1b1" style="width: 130px">
+				<div align="left">
+					<b><font face="Verdana" size="1">Inscrição Estadual: </font></b>
+				</div>
+			</td>
+			</td>
+			<td valign="top" bgcolor="#fafae4">
+				<font><font><font face="Verdana" size="1">
+					254239900 </font></font></font>
+			</td>
+		</tr>
+	</table>
+	<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" background=""
+		   style="width: 760px">
+		<tr>
+			<td width="150" valign="top" bgcolor="#f1f1b1" style="width: 150">
+				<b><font size="1" face="Verdana">Nome/Razão Estadual: </font></b>
+			</td>
+			<td width="653" valign="top" bgcolor="#fafae4">
+				<font><font><font face="Verdana" size="1">
+					A. ANGELONI & CIA LTDA</font></font></font>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table width="760" cellspacing="0" cellpadding="3" align="center" bordercolor="#ffffff">
+		<tr>
+			<td>
+				<b><font face="Verdana" size="1" color="#996600">ENDEREÇO</font></b>
+			</td>
+		</tr>
+	</table>
+	<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760px">
+		<tr>
+			<td width="80" valign="top" bgcolor="#f1f1b1" style="width: 80px">
+				<b><font size="1" face="Verdana">Logradouro:</font></b>
+			</td>
+			<td valign="top" bgcolor="#fafae4">
+				<font><font><font face="Verdana" size="1">
+					RUA:
+					BRUSQUE</font></font></font>
+			</td>
+		</tr>
+	</table>
+	<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760px">
+		<tr>
+			<td width="60" valign="top" bgcolor="#f1f1b1" style="width: 60px">
+				<b><font face="Verdana" size="1">Número:</font></b>
+			</td>
+			<td valign="top" bgcolor="#fafae4" style="width: 70px" width="70">
+				<font><font><font face="Verdana" size="1">
+					00358 </font></font></font>
+			</td>
+			<td valign="top" bgcolor="#f1f1b1" style="width: 95px" width="95">
+				<strong><font face="Verdana" size="1">Complemento:</font></strong>
+			</td>
+			<td valign="top" bgcolor="#fafae4" style="width: 100px" width="100">
+				<font><font face="Verdana" size="1">
+					LOJA</font></font>
+			</td>
+			<td valign="top" bgcolor="#f1f1b1" style="width: 50px" width="50">
+				<strong><font face="Verdana" size="1">Bairro:</font></strong>
+			</td>
+			<td valign="top" bgcolor="#fafae4">
+				<font><font face="Verdana" size="1">
+					CENTRO</font></font>
+			</td>
+		</tr>
+	</table>
+	<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760px">
+		<tr>
+			<td width="30" valign="top" bgcolor="#f1f1b1" style="width: 30px">
+				<b><font size="1" face="Verdana">UF:</font></b>
+			</td>
+			<td valign="top" bgcolor="#fafae4" style="width: 100px" width="100">
+				<font><font><font face="Verdana" size="1">
+					SC</font></font></font>
+			</td>
+			<td valign="top" bgcolor="#f1f1b1" style="width: 70px" width="70">
+				<strong><font face="Verdana" size="1">Município:</font></strong>
+			</td>
+			<td valign="top" bgcolor="#fafae4" style="width: 300px" width="300">
+				<font><font face="Verdana" size="1">
+					ITAJAÍ</font></font>
+			</td>
+			<td valign="top" bgcolor="#f1f1b1" style="width: 40px" width="40">
+				<strong><font face="Verdana" size="1">CEP:</font></strong>
+			</td>
+			<td valign="top" bgcolor="#fafae4">
+				<font><font face="Verdana" size="1">
+					88303000</font></font>
+			</td>
+		</tr>
+	</table>
+	<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760px">
+		<tr>
+			<td width="130" valign="top" bgcolor="#f1f1b1" style="width: 130px">
+				<b><font size="1" face="Verdana">Endereço Eletrônico:</font></b>
+			</td>
+			<td width="386" valign="top" bgcolor="#fafae4" style="width: 386px">
+				<font><font><font face="Verdana" size="1">
+					-</font></font></font>
+			</td>
+			<td valign="top" width="70" bgcolor="#f1f1b1" style="width: 70px">
+				<strong><font face="Verdana" size="1">Telefone:</font></strong>
+			</td>
+			<td valign="top" bgcolor="#fafae4">
+				<font><font face="Verdana" size="1">
+					-</font></font>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table width="760" cellspacing="0" cellpadding="3" align="center">
+		<tr>
+			<td>
+				<b><font face="Verdana" size="1" color="#996600">INFORMAÇÕES COMPLEMENTARES </font>
+				</b>
+			</td>
+		</tr>
+	</table>
+	<table border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760">
+		<tr>
+			<td valign="top" bgcolor="#f1f1b1" style="width: 160">
+				<b><font size="1" face="Verdana">Data de Início de Atividade:</font></b>
+			</td>
+			<td valign="top" bgcolor="#fafae4" width="582">
+				<font><font><font face="Verdana" size="1">
+					30/11/2001</font></font></font>
+			</td>
+		</tr>
+	</table>
+	<table width="760" border="1" cellspacing="0" cellpadding="3" align="center">
+		<tr>
+			<td width="156" valign="top" bgcolor="#f1f1b1">
+				<b><font size="1" face="Verdana">Situação Cadastral Atual:</font></b>
+			</td>
+			<td width="210" valign="top" bgcolor="#fafae4">
+				<font><font><font face="Verdana" size="1">
+					ATIVO</font></font></font>
+			</td>
+			<td valign="top" width="200" bgcolor="#f1f1b1">
+				<font face="Verdana" size="1"><strong>Data desta Situação Cadastral:</strong></font>
+			</td>
+			<td valign="top" bgcolor="#fafae4" width="160">
+				<font><font face="Verdana" size="1">
+					30/11/2001</font></font>
+			</td>
+		</tr>
+	</table>
+	<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760px">
+		<tr>
+			<td width="90" valign="top" bgcolor="#f1f1b1" style="width: 90px">
+				<b><font size="1" face="Verdana">Observações:</font></b>
+			</td>
+			<td valign="top" bgcolor="#fafae4">
+				<font><font size="1" face="Verdana"></font></font>
+			</td>
+		</tr>
+	</table>
+	<table border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760">
+		<tr>
+			<td valign="top" bgcolor="#f1f1b1" style="width: 180">
+				<b><font size="1" face="Verdana">Regime de Apuração de ICMS: </font></b>
+			</td>
+			<td valign="top" bgcolor="#fafae4" width="215">
+				<font face="Verdana" size="1">
+					NORMAL
+				</font>
+			</td>
+			<td valign="top" width="130" bgcolor="#f1f1b1">
+				<b><font face="Verdana" size="1">Enquadramento Fiscal: </font></b>
+			</td>
+			<td valign="top" bgcolor="#fafae4" width="201">
+				<font face="Verdana" size="1">
+					NORMAL
+				</font>
+			</td>
+		</tr>
+	</table>
+	<table border="1" cellspacing="0" cellpadding="3" align="center" style="WIDTH: 760">
+		<tr>
+			<td valign="top" bgcolor="#f1f1b1" style="WIDTH: 760"><b><font size="1" face="Verdana">Código e Descrição da
+				Atividade Econômica Principal : </font></b></td>
+		</tr>
+		<tr>
+			<td valign="top" bgcolor="#fafae4" width="607"><font><font><font face="Verdana" size="1">
+				4711302 - Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios
+				supermercados
+			</font></font></font></td>
+		</tr>
+	</table>
+
+	<table border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760">
+		<tr>
+			<td valign="top" bgcolor="#f1f1b1" style="width: 760">
+				<b><font size="1" face="Verdana">Contribuinte credenciado a emitir os seguintes documentos
+					eletrônicos abaixo: </font></b>
+			</td>
+		</tr>
+
+	</table>
+
+	<table border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760">
+
+		<tr>
+			<td valign="top" bgcolor="#fafae4" width="760">
+				<font face="Verdana" size="1">-
+					- Credenciado a Emitir Escrituração Fiscal Digital - EFD a partir de 01/01/2009
+
+				</font>
+			</td>
+		</tr>
+
+		<tr>
+			<td valign="top" bgcolor="#fafae4" width="760">
+				<font face="Verdana" size="1">-
+					- Credenciado a Emitir Nota Fiscal Eletrônica - NFe a partir de 01/10/2010
+
+				</font>
+			</td>
+		</tr>
+
+	</table>
+
+	<table border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760">
+		<tr>
+			<td valign="top" bgcolor="#f1f1b1" style="width: 760">
+				<b><font size="1" face="Verdana">Código e Descrição das Atividades Econômicas Secundárias : </font></b>
+			</td>
+		</tr>
+	</table>
+
+	<table border="1" cellspacing="0" cellpadding="3" align="center" style="width: 760">
+
+		<tr>
+			<td valign="top" bgcolor="#fafae4" width="760">
+				<font face="Verdana" size="1">-
+					******
+					-
+
+
+				</font>
+			</td>
+		</tr>
+
+	</table>
+
+	<table width="760" cellspacing="0" cellpadding="3" align="center" bordercolor="#ffffff"
+		   style="width: 760px">
+		<tr>
+			<td>
+				<table border="0" width="740">
+					<tr>
+						<td width="12%">
+							<strong><font face="Verdana" size="1">Observação:<br>
+								&nbsp;<br>
+								&nbsp;<br>
+								&nbsp;</font></strong>
+						</td>
+						<td width="88%" valign="middle">
+							<strong><font face="Verdana" size="1">Os dados acima estão baseados em informações
+								fornecidas
+								pelo próprio contribuinte cadastrado.<br>
+								Não valem como certidão de sua efetiva existência de fato e de direito, não são
+								oponíveis à<br>
+								Fazenda e nem excluem a responsabilidade tributária derivada de operações com ele
+								ajustadas.<br>
+								&nbsp;</font></strong>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<div align="center">
+		<input type="hidden" name="EstadoSelecionado" value="1234"><font size="1" face="Verdana">
+	</font>
+		<input type="hidden" name="SiglaEstadoSelecionado" value="1234"><font size="1" face="Verdana">
+	</font>
+		<input type="hidden" name="txt_TIPO"><font face="Verdana" size="1"> </font>
+		<input type="hidden" name="txt_PESQ"><font face="Verdana" size="1"> </font>
+		<input type="hidden" name="txt_CNPJ"><font size="1" face="Verdana"> </font>
+		<input type="hidden" name="txt_IE"><font size="1" face="Verdana"> </font>
+		<input type="hidden" name="NCons" value="1234"><font> </font>
+	</div>
+</form>
+<p align="center">
+	<font face="Verdana" size="2"><a href="consulta_empresa_pesquisa.aspx">Voltar para nova
+		seleção de contribuinte<br>
+	</a><a href="http://www.sintegra.gov.br">Acessar cadastro de outro Estado</a></p>
+</FONT>
+</body>
+</html>
