@@ -106,8 +106,17 @@ class SintegraSC
 	 */
 	public static function parser(Crawler $crawler)
 	{
-//		if ($crawler->filter('body > table:nth-child(3) > tr:nth-child(2) > td > b > font')->count() > 0)
-//			throw new Exception('Erro ao consultar. O CNPJ informado não existe no cadastro.', 99);
+		$result = [];
+
+		if ($crawler->filter('#lblMsgErro')->count() > 0) {
+			$result['error'] = 'Erro ao realizar a consulta, o captcha informado está incorreto';
+			return $result;
+		}
+
+		if ($crawler->filter('#lblNaoEncontrado')->html() != '') {
+			$result['error'] = 'O CNPJ Informado não consta na base de dados';
+			return $result;
+		}
 
 		$tdList = $crawler->filter('form td');
 
@@ -130,7 +139,7 @@ class SintegraSC
 			}
 		}
 
-		$result = [];
+
 		foreach ($keys as $k => $content) {
 			$nkey = self::$KEYMAP[$content];
 			if (count($values[$k]) > 1) {
